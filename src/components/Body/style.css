@@ -1,0 +1,8 @@
+.body{
+    width: 100%;
+    background-color: rgb(230, 213, 69);
+    height: 100px;
+}
+.button{
+    margin-bottom: 10px;
+}
