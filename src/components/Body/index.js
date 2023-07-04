@@ -1,19 +1,29 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import './style.css'
+import Button from "./button";
 
 const Body = ({hBody}) => {
-    const [stateBody, setStateBody] = useState()
+    const [stateBody, setStateBody] = useState(false) //переменнная и функция
 
-    const buttonClick = () => {
-        console.log(setStateBody);
-        setStateBody(!stateBody);
+    
+
+    /*   var clickHandler = function(event){
+        console.log('Клик!')
     }
+    */
+    var clickHandler = (event) => {
+    console.log('Клик!')
+   }
+
+   if (!stateBody) {
+        return <p> <Button func_state={setStateBody} stateButton = {stateBody}/> </p>
+   }
+
     return(
+        
         <div className = 'body'>
             {stateBody && <p>{hBody}</p>}
-            <button className='button' onClick={buttonClick}> 
-                Нажми на меня 
-            </button>
+            <Button func_state={setStateBody} stateButton = {stateBody}/>
         </div>
     )
 }
