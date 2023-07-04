@@ -1,12 +1,15 @@
 import React from "react";
+
 import {Header} from './components/Header';
+import {Body} from './components/Body';
+import {Footer} from './components/Footer';
+
 import{
   Routes,
-  Route, BrowserRouter,
+  Route, 
+  BrowserRouter,
 } from 'react-router-dom'
-import {Body} from './components/Body';
 
-import {Footer} from './components/Footer';
 
 const App = () => {
   const hHeade = 'Загловок';
@@ -14,19 +17,21 @@ const App = () => {
   const hFoote = 'Нижний колонтитул';
  
   return (
-    /*<>
+    <>
     <BrowserRouter>
     <Header hHeader={hHeade}/>
     <Routes>
-      <Route><Link to='/'><Body hBody={hBodi}/></Link></Route>
-      <Route><Link to='/'><Footer hFooter={hFoote}/></Link></Route>
+      <Route path='/' element={
+        <>
+        <Body hBody={hBodi}/>
+        <Footer hFooter={hFoote}/> 
+        </>
+      }/>
+      <Route path='/dashboard' element={
+        <Footer hFooter={hFoote}/>  
+      }/>
     </Routes>
     </BrowserRouter>
-    </>*/
-    <>
-    <Header hHeader={hHeade}/>
-    <Body hBody={hBodi}/>
-    <Footer hFooter={hFoote}/>
     </>
   );
 };

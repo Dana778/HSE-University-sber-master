@@ -7,6 +7,7 @@ export const ContainerBody = styled.div`
     height: 100px;
 `;
 
-export const ContainerButton = styled.div`
+export const ContainerButton = styled.button`
     margin-bottom: 10px;
+    background-color: rgb(174, 78, 252);
 `;
