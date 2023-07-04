@@ -1,13 +1,11 @@
 import React from "react";
-import './style.css'
+import './style.js';
+import { ContainerFooter } from "./style.js";
 
-const Footer = ({hFooter}) => {
+export const Footer = ({hFooter}) => {
     return(
-        <div className = 'footer'>
-            {
-                <p>{hFooter}</p>
-            }
-        </div>
+    <p><ContainerFooter>
+        <p>{hFooter}</p>
+    </ContainerFooter></p>
     )
 }
-export default Footer;

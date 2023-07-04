@@ -1,12 +1,12 @@
 import React from "react";
-import './style.css'
-const Header = ({hHeader}) => {
+import './style.js';
+import { ContainerHeader } from "./style.js";
+import {Link} from 'react-router-dom';
+
+export const Header = ({hHeader}) => {
     return(
-        <div className = 'header'>
-            {
-                <p>{hHeader}</p>
-            }
-        </div>
+        <ContainerHeader>
+            <p>{hHeader}</p>
+        </ContainerHeader>
     )
 }
-export default Header;

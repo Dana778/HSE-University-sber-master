@@ -5,7 +5,7 @@ const Button = ({func_state, stateButton}) => {
     }
 
     return <button className='button' onClick={buttonClick}>
-        {stateButton ? 'я видна' : 'спрятано'}
+        {stateButton ? 'я видна' : 'я спрятана'}
     </button>
 }
 

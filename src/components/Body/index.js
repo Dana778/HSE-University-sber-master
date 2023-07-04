@@ -1,17 +1,12 @@
 import {useState} from "react";
-import './style.css'
+import './style.js'
 import Button from "./button";
+import { ContainerBody } from "./style.js";
 
-const Body = ({hBody}) => {
-    const [stateBody, setStateBody] = useState(false) //переменнная и функция
+export const Body = ({hBody}) => {
+    const [stateBody, setStateBody] = useState(true) //переменнная и функция
 
-    
-
-    /*   var clickHandler = function(event){
-        console.log('Клик!')
-    }
-    */
-    var clickHandler = (event) => {
+    const clickHandler = (event) => {
     console.log('Клик!')
    }
 
@@ -20,11 +15,9 @@ const Body = ({hBody}) => {
    }
 
     return(
-        
-        <div className = 'body'>
+        <ContainerBody>
+             <p><Button func_state={setStateBody} stateButton = {stateBody}/></p>
             {stateBody && <p>{hBody}</p>}
-            <Button func_state={setStateBody} stateButton = {stateBody}/>
-        </div>
+        </ContainerBody>
     )
 }
-export default Body;
