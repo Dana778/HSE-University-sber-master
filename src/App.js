@@ -4,6 +4,10 @@ import { Header } from './components/Header';
 import { Body } from './components/Body';
 import { Footer } from './components/Footer';
 
+import * as React from 'react';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+
 import {
   Routes,
   Route,
@@ -85,6 +89,10 @@ const [aboba, setAboba] = useState(false)
             <>
               <Body hBody={hBodi} />
               <Footer hFooter={hFoote} />
+
+              <Button variant="text">Text</Button>
+              <Button variant="contained">Contained</Button>
+              <Button variant="outlined">Outlined</Button>
             </>
           } />
           <Route path='/dashboard' element={

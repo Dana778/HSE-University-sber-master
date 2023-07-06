@@ -1,6 +1,6 @@
 import {useState} from "react";
 import './style.js'
-import Button from "./button";
+import {Button} from "./button";
 import { ContainerBody } from "./style.js";
 
 export const Body = ({hBody}) => {

@@ -1,5 +1,5 @@
 import { ContainerButton } from "./style.js";
-const Button = ({func_state, stateButton}) => {
+export const Button = ({func_state, stateButton}) => {
     const buttonClick = () => {
         console.log(func_state)
         func_state(!stateButton)
@@ -10,5 +10,3 @@ const Button = ({func_state, stateButton}) => {
         {stateButton ? 'я видна' : 'я спрятана'}
     </ContainerButton>
 }
-
-export default Button
