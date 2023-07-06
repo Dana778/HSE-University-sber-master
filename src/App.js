@@ -11,6 +11,8 @@ import {
 } from 'react-router-dom'
 
 
+
+
 const App = () => {
   const hHeade = 'Загловок';
   const hBodi = 'Тело';
@@ -18,6 +20,13 @@ const App = () => {
 
   const [pocemons, setPocemons] = useState([])
   const [statePoc, setStatePoc] = useState(false)
+
+  const [UserInput, setUserInput] = useState('input')
+  const HandlerOnChargeInput = (event) =>{
+    setUserInput(event.target.value)
+    console.log(event)
+  }
+const [aboba, setAboba] = useState(false)
 
   const getResponse = () => {
     fetch('http://localhost:3001/pokemon')
@@ -64,6 +73,12 @@ const App = () => {
         }
       }>AAAA</button>
       <BrowserRouter>
+        <input value={UserInput} onChange={HandlerOnChargeInput}/>
+        <button onClick = {() => {setUserInput('')}}>clear</button> 
+        <button onClick={() => {setAboba(!aboba)}}>change</button>
+        {
+          aboba===true && <h1>{UserInput}</h1> 
+        }
         <Header hHeader={hHeade} />
         <Routes>
           <Route path='/' element={

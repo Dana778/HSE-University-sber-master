@@ -6,9 +6,9 @@ import { ContainerBody } from "./style.js";
 export const Body = ({hBody}) => {
     const [stateBody, setStateBody] = useState(true) //переменнная и функция
 
-    const clickHandler = (event) => {
+    /*const clickHandler = (event) => {
     console.log('Клик!')
-   }
+   }*/
 
    if (!stateBody) {
         return <p> <Button func_state={setStateBody} stateButton = {stateBody}/> </p>
